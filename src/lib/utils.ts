@@ -50,12 +50,12 @@ export function formatSqft(n: number) {
   return `${formatNumber(n)} sq ft`;
 }
 
-const REFERENCE_NOW = new Date("2026-10-01T12:00:00Z");
+/** Seeded content is dated up to this point; the clock never runs earlier. */
+const SEED_HORIZON = new Date("2026-10-01T12:00:00Z").getTime();
 
-/** Relative time against a fixed demo "now" so seeded dates stay stable. */
-export function timeAgo(iso: string, now: Date = REFERENCE_NOW) {
+export function timeAgo(iso: string, now: number = Math.max(Date.now(), SEED_HORIZON)) {
   const then = new Date(iso).getTime();
-  const diff = Math.max(0, now.getTime() - then);
+  const diff = Math.max(0, now - then);
   const minutes = Math.floor(diff / 60000);
   if (minutes < 60) return minutes <= 1 ? "just now" : `${minutes}m`;
   const hours = Math.floor(minutes / 60);
