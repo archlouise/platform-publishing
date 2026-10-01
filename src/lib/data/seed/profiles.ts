@@ -8,10 +8,10 @@ import type {
 } from "@/lib/types";
 
 /** The seeded signed-in demo user. */
-export const DEMO_PROFILE_ID = "pr_maya";
+export const DEMO_PROFILE_ID = "pr_louise";
 
 export const users: User[] = [
-  { id: "us_maya", email: "maya@meridianatelier.example" },
+  { id: "us_louise", email: "louise@meridianatelier.example" },
   { id: "us_daniel", email: "daniel@meridianatelier.example" },
   { id: "us_priya", email: "priya@tidewaterarch.example" },
   { id: "us_tomas", email: "tomas@tidewaterarch.example" },
@@ -31,18 +31,18 @@ export const users: User[] = [
 
 export const profiles: Profile[] = [
   {
-    id: "pr_maya",
-    user_id: "us_maya",
-    slug: "maya-lindqvist",
-    full_name: "Maya Lindqvist",
-    headline: "Principal at Meridian Atelier. Mass timber housing and adaptive reuse.",
+    id: "pr_louise",
+    user_id: "us_louise",
+    slug: "louise-hung",
+    full_name: "Louise Hung",
+    headline: "Healthcare and health science architect. RA, LEED AP. Project Manager at Meridian Atelier.",
     profession: "Architect",
     location: "San Francisco, CA",
-    bio: "I lead housing and reuse work at Meridian Atelier. Over the last eight years that has meant three mass timber multifamily buildings, two warehouse conversions, and a lot of time with structural engineers arguing about panel layouts. I care about buildings that are honest about how they were made and teams that stay together across projects.",
+    bio: "Licensed architect in California with more than 20 years of experience, 15 of them on healthcare and health science projects for clients including Stanford University, Kaiser Permanente, the University of California, and the Department of Veterans Affairs. I lead complex hospital renovation projects through HCAI review, coordinating in-house technical staff, client user groups, and engineering consultants from concept through construction administration. My job is to build consensus, secure decisions, and keep a multidisciplinary team moving toward the performance goals the client actually cares about.",
     avatar_url: null,
     current_company_id: "co_meridian",
-    connections_count: 612,
-    years_experience: 19,
+    connections_count: 191,
+    years_experience: 25,
   },
   {
     id: "pr_daniel",
@@ -257,9 +257,11 @@ export const profiles: Profile[] = [
 ];
 
 export const experiences: Experience[] = [
-  { id: "ex_1", profile_id: "pr_maya", company_id: "co_meridian", company_name: "Meridian Atelier", title: "Principal", start_year: 2018, end_year: null, summary: "Lead housing and adaptive reuse studio. Principal in charge on Harbor View Lofts and Mission Creek Commons." },
-  { id: "ex_2", profile_id: "pr_maya", company_id: "co_meridian", company_name: "Meridian Atelier", title: "Senior Associate", start_year: 2012, end_year: 2018, summary: "Project lead on civic and multifamily work." },
-  { id: "ex_3", profile_id: "pr_maya", company_id: null, company_name: "Studio Nordlys", title: "Architect", start_year: 2007, end_year: 2012, summary: "Housing competitions and built work in Copenhagen." },
+  { id: "ex_1", profile_id: "pr_louise", company_id: "co_meridian", company_name: "Meridian Atelier", title: "Project Manager", start_year: 2022, end_year: null, summary: "Project management and technical lead on the studio's institutional and housing work, with responsibility for agency approvals and construction administration." },
+  { id: "ex_2", profile_id: "pr_louise", company_id: null, company_name: "GL Planning & Design, Inc.", title: "Project Manager", start_year: 2018, end_year: 2022, summary: "Managed healthcare and health science projects through HCAI review." },
+  { id: "ex_3", profile_id: "pr_louise", company_id: null, company_name: "Fong & Chan Architects", title: "Architect Project Lead", start_year: 2009, end_year: 2017, summary: "Project lead on hospital and clinic projects: design, technical development, client presentations, code and agency approvals, construction administration." },
+  { id: "ex_33", profile_id: "pr_louise", company_id: null, company_name: "SmithGroup", title: "Architect II", start_year: 2005, end_year: 2009, summary: "Healthcare and institutional projects." },
+  { id: "ex_34", profile_id: "pr_louise", company_id: null, company_name: "Flad Architects", title: "Designer", start_year: 2000, end_year: 2004, summary: "Design and documentation on science and healthcare buildings in San Francisco." },
   { id: "ex_4", profile_id: "pr_daniel", company_id: "co_meridian", company_name: "Meridian Atelier", title: "Project Architect", start_year: 2020, end_year: null, summary: "Construction documents and CA on multifamily and civic projects." },
   { id: "ex_5", profile_id: "pr_daniel", company_id: null, company_name: "Portola Design Group", title: "Designer", start_year: 2017, end_year: 2020, summary: "Multifamily design development." },
   { id: "ex_6", profile_id: "pr_priya", company_id: "co_tidewater", company_name: "Tidewater Architecture", title: "Associate Principal", start_year: 2016, end_year: null, summary: "Lead on education and healthcare projects." },
@@ -292,7 +294,7 @@ export const experiences: Experience[] = [
 ];
 
 export const education: Education[] = [
-  { id: "ed_1", profile_id: "pr_maya", school: "Royal Danish Academy", degree: "M.Arch", year: 2007 },
+  { id: "ed_1", profile_id: "pr_louise", school: "Washington University in St. Louis", degree: "Master of Architecture", year: 2000 },
   { id: "ed_2", profile_id: "pr_daniel", school: "Cal Poly San Luis Obispo", degree: "B.Arch", year: 2017 },
   { id: "ed_3", profile_id: "pr_priya", school: "UC Berkeley", degree: "M.Arch", year: 2010 },
   { id: "ed_4", profile_id: "pr_tomas", school: "SCI-Arc", degree: "M.Arch", year: 2019 },
@@ -311,8 +313,8 @@ export const education: Education[] = [
 ];
 
 export const certifications: Certification[] = [
-  { id: "ce_1", profile_id: "pr_maya", name: "Licensed Architect, California", issuer: "CAB" },
-  { id: "ce_2", profile_id: "pr_maya", name: "LEED AP BD+C", issuer: "USGBC" },
+  { id: "ce_1", profile_id: "pr_louise", name: "Licensed Architect, California", issuer: "California Architects Board" },
+  { id: "ce_2", profile_id: "pr_louise", name: "LEED AP Building Design + Construction", issuer: "USGBC" },
   { id: "ce_3", profile_id: "pr_daniel", name: "Licensed Architect, California", issuer: "CAB" },
   { id: "ce_4", profile_id: "pr_priya", name: "Licensed Architect, California", issuer: "CAB" },
   { id: "ce_5", profile_id: "pr_priya", name: "LEED AP BD+C", issuer: "USGBC" },
@@ -334,11 +336,12 @@ export const certifications: Certification[] = [
 ];
 
 export const profileSkills: ProfileSkill[] = [
-  { profile_id: "pr_maya", skill_id: "sk_masstimber", endorsement_count: 41 },
-  { profile_id: "pr_maya", skill_id: "sk_adaptive", endorsement_count: 37 },
-  { profile_id: "pr_maya", skill_id: "sk_multifamily", endorsement_count: 52 },
-  { profile_id: "pr_maya", skill_id: "sk_revit", endorsement_count: 18 },
-  { profile_id: "pr_maya", skill_id: "sk_leed", endorsement_count: 12 },
+  { profile_id: "pr_louise", skill_id: "sk_healthcare", endorsement_count: 31 },
+  { profile_id: "pr_louise", skill_id: "sk_hcai", endorsement_count: 28 },
+  { profile_id: "pr_louise", skill_id: "sk_cds", endorsement_count: 16 },
+  { profile_id: "pr_louise", skill_id: "sk_leed", endorsement_count: 12 },
+  { profile_id: "pr_louise", skill_id: "sk_archdesign", endorsement_count: 7 },
+  { profile_id: "pr_louise", skill_id: "sk_designresearch", endorsement_count: 5 },
   { profile_id: "pr_daniel", skill_id: "sk_revit", endorsement_count: 29 },
   { profile_id: "pr_daniel", skill_id: "sk_cds", endorsement_count: 24 },
   { profile_id: "pr_daniel", skill_id: "sk_multifamily", endorsement_count: 15 },

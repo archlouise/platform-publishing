@@ -31,4 +31,6 @@ export const skills: Skill[] = [
   { id: "sk_clt", name: "CLT panels", category: "Materials" },
   { id: "sk_specs", name: "Specification writing", category: "Design" },
   { id: "sk_leed", name: "LEED", category: "Sustainability" },
+  { id: "sk_archdesign", name: "Architectural design", category: "Design" },
+  { id: "sk_designresearch", name: "Design research", category: "Design" },
 ];

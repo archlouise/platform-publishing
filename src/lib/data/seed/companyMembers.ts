@@ -1,7 +1,7 @@
 import type { CompanyMember, SupplierProduct } from "@/lib/types";
 
 export const companyMembers: CompanyMember[] = [
-  { company_id: "co_meridian", profile_id: "pr_maya", title: "Principal", is_admin: true },
+  { company_id: "co_meridian", profile_id: "pr_louise", title: "Project Manager", is_admin: true },
   { company_id: "co_meridian", profile_id: "pr_daniel", title: "Project Architect", is_admin: false },
   { company_id: "co_tidewater", profile_id: "pr_priya", title: "Associate Principal", is_admin: true },
   { company_id: "co_tidewater", profile_id: "pr_tomas", title: "Senior Designer", is_admin: false },
