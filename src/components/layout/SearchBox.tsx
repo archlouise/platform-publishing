@@ -2,13 +2,14 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { SearchIcon } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
 
 export function SearchBox({ className }: { className?: string }) {
   const router = useRouter();
   const params = useSearchParams();
   const [value, setValue] = useState(params.get("q") ?? "");
+  const id = useId();
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -18,7 +19,7 @@ export function SearchBox({ className }: { className?: string }) {
 
   return (
     <form role="search" onSubmit={onSubmit} className={cn("relative", className)}>
-      <label htmlFor="global-search" className="sr-only">
+      <label htmlFor={id} className="sr-only">
         Search people, companies, and projects
       </label>
       <SearchIcon
@@ -26,7 +27,7 @@ export function SearchBox({ className }: { className?: string }) {
         className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground"
       />
       <input
-        id="global-search"
+        id={id}
         type="search"
         value={value}
         onChange={(e) => setValue(e.target.value)}
