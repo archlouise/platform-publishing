@@ -15,7 +15,7 @@ export async function AppHeader() {
       <div className="relative mx-auto flex h-14 max-w-6xl items-center gap-3 px-4">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2 rounded-md outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+          className="flex shrink-0 items-center gap-2 rounded-md outline-none focus-visible:ring-3 focus-visible:ring-ring/50 pointer-coarse:min-h-11"
           aria-label="AEC Network home"
         >
           <Wordmark />

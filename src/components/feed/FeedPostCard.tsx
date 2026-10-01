@@ -76,7 +76,7 @@ export function FeedPostCard({
         <div className="px-4 pt-3">
           <Link
             href={entityHref("project", project.slug)}
-            className="inline-flex max-w-full items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs font-medium text-foreground outline-none hover:border-foreground/30 focus-visible:ring-2 focus-visible:ring-ring/50"
+            className="inline-flex max-w-full items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs font-medium text-foreground outline-none hover:border-foreground/30 focus-visible:ring-2 focus-visible:ring-ring/50 pointer-coarse:min-h-11 pointer-coarse:px-3"
           >
             <span className="size-1.5 rounded-full bg-brand" aria-hidden />
             <span className="truncate">{project.name}</span>
