@@ -69,12 +69,12 @@ export default async function PersonPage(props: PageProps<"/people/[slug]">) {
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-        <div className="flex flex-col gap-6">
-          <Section title="About">
+        <div className="contents lg:flex lg:flex-col lg:gap-6">
+          <Section title="About" className="order-2 lg:order-none">
             <p className="max-w-prose text-[15px] leading-relaxed">{profile.bio}</p>
           </Section>
 
-          <Section title="Projects" count={projects.length}>
+          <Section title="Projects" count={projects.length} className="order-3 lg:order-none">
             {projects.length ? (
               <ul className="grid gap-4 sm:grid-cols-2">
                 {projects.map((p) => (
@@ -92,7 +92,7 @@ export default async function PersonPage(props: PageProps<"/people/[slug]">) {
             </p>
           </Section>
 
-          <Section title="Experience">
+          <Section title="Experience" className="order-5 lg:order-none">
             <ol className="flex flex-col gap-4">
               {experiences.map((e) => (
                 <li key={e.id} className="flex gap-3">
@@ -116,14 +116,14 @@ export default async function PersonPage(props: PageProps<"/people/[slug]">) {
           </Section>
 
           {posts.length ? (
-            <Section title="Posts" count={posts.length}>
+            <Section title="Posts" count={posts.length} className="order-7 lg:order-none">
               <PostList posts={posts} viewer={me.profile} />
             </Section>
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-6">
-          <Section title="Skills" count={skills.length}>
+        <div className="contents lg:flex lg:flex-col lg:gap-6">
+          <Section title="Skills" count={skills.length} className="order-4 lg:order-none">
             <ul className="flex flex-wrap gap-2">
               {skills.map((s) => (
                 <li key={s.skill.id}>
@@ -136,7 +136,7 @@ export default async function PersonPage(props: PageProps<"/people/[slug]">) {
             </p>
           </Section>
 
-          <Section title="Education and licenses">
+          <Section title="Education and licenses" className="order-6 lg:order-none">
             <ul className="flex flex-col gap-3 text-sm">
               {education.map((e) => (
                 <li key={e.id} className="flex gap-2.5">
@@ -159,7 +159,7 @@ export default async function PersonPage(props: PageProps<"/people/[slug]">) {
             </ul>
           </Section>
 
-          <Section title="At a glance">
+          <Section title="At a glance" className="order-1 lg:order-none">
             <dl className="grid grid-cols-2 gap-3 text-sm">
               <div>
                 <dt className="text-muted-foreground">Experience</dt>

@@ -11,12 +11,15 @@ export function FeedList({
   viewerCompany,
   projects,
   showComposer = true,
+  afterComposer,
 }: {
   seeded: PostView[];
   viewer: Profile;
   viewerCompany: Company | null;
   projects: Project[];
   showComposer?: boolean;
+  /** Rendered between the composer and the posts, e.g. the phone suggestions strip. */
+  afterComposer?: React.ReactNode;
 }) {
   const state = useDemoState();
   const projectById = new Map(projects.map((p) => [p.id, p]));
@@ -33,6 +36,7 @@ export function FeedList({
       {showComposer ? (
         <PostComposer viewer={viewer} company={viewerCompany} projects={projects} />
       ) : null}
+      {afterComposer}
       {[...local, ...seeded].map((view) => (
         <FeedPostCard key={view.post.id} view={view} viewer={viewer} />
       ))}

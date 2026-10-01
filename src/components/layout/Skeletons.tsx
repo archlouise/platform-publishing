@@ -9,9 +9,9 @@ export function DirectorySkeleton({ cards = 6, columns = 2 }: { cards?: number; 
     <div role="status" aria-label="Loading">
       <Bone className="mb-2 h-8 w-48" />
       <Bone className="mb-6 h-4 w-96 max-w-full" />
-      <div className="mb-6 flex gap-3">
+      <div className="mb-6 grid grid-cols-2 gap-3 sm:flex">
         {Array.from({ length: 4 }).map((_, i) => (
-          <Bone key={i} className="h-9 w-36" />
+          <Bone key={i} className="h-11 w-full sm:w-36 md:h-9" />
         ))}
       </div>
       <div className={cn("grid gap-4", columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "md:grid-cols-2")}>

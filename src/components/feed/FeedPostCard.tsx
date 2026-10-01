@@ -10,7 +10,7 @@ import { PostTypeBadge } from "@/components/entities/PostTypeBadge";
 import { projectHeroUri } from "@/lib/placeholders";
 import { demoActions, useDemoState } from "@/lib/store";
 import type { PostView, Profile } from "@/lib/types";
-import { cn, formatNumber, timeAgo } from "@/lib/utils";
+import { cn, formatNumber, pluralize, timeAgo } from "@/lib/utils";
 
 export function FeedPostCard({
   view,
@@ -48,12 +48,12 @@ export function FeedPostCard({
   return (
     <article className="rounded-xl bg-card ring-1 ring-foreground/10">
       <header className="flex items-start gap-3 px-4 pt-4">
-        <Link href={entityHref("person", author.slug)} className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring/50">
+        <Link href={entityHref("person", author.slug)} className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring/50 pointer-coarse:-m-0.5 pointer-coarse:p-0.5">
           <PersonAvatar profile={author} size="md" />
         </Link>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-            <EntityLink kind="person" slug={author.slug} className="text-[15px]">
+            <EntityLink kind="person" slug={author.slug} className="text-[15px] pointer-coarse:-my-3 pointer-coarse:py-3">
               {author.full_name}
             </EntityLink>
             {company ? (
@@ -76,7 +76,7 @@ export function FeedPostCard({
         <div className="px-4 pt-3">
           <Link
             href={entityHref("project", project.slug)}
-            className="inline-flex max-w-full items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs font-medium text-foreground outline-none hover:border-foreground/30 focus-visible:ring-2 focus-visible:ring-ring/50"
+            className="inline-flex max-w-full items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs font-medium text-foreground outline-none hover:border-foreground/30 focus-visible:ring-2 focus-visible:ring-ring/50 pointer-coarse:min-h-11 pointer-coarse:px-3"
           >
             <span className="size-1.5 rounded-full bg-brand" aria-hidden />
             <span className="truncate">{project.name}</span>
@@ -85,7 +85,7 @@ export function FeedPostCard({
         </div>
       ) : null}
 
-      <p className="px-4 pt-3 text-[15px] leading-relaxed whitespace-pre-line">{post.body}</p>
+      <p className="px-4 pt-3 text-[15px] leading-relaxed wrap-break-word whitespace-pre-line">{post.body}</p>
 
       {isMedia ? (
         <Link href={entityHref("project", project.slug)} className="mt-3 block outline-none focus-visible:ring-2 focus-visible:ring-ring/50">
@@ -103,6 +103,7 @@ export function FeedPostCard({
           variant="ghost"
           size="sm"
           aria-pressed={liked}
+          aria-label={`Like, ${pluralize(likeCount, "like")}`}
           onClick={() => demoActions.toggleLike(post.id)}
           className={cn(liked && "text-brand hover:text-brand")}
         >
@@ -113,6 +114,7 @@ export function FeedPostCard({
           variant="ghost"
           size="sm"
           aria-expanded={open}
+          aria-label={`${open ? "Hide" : "Show"} comments, ${pluralize(commentCount, "comment")}`}
           onClick={() => setOpen((v) => !v)}
         >
           <MessageCircleIcon />
@@ -143,7 +145,7 @@ export function FeedPostCard({
                       {timeAgo(comment.created_at)}
                     </time>
                   </div>
-                  <p className="mt-0.5">{comment.body}</p>
+                  <p className="mt-0.5 wrap-break-word">{comment.body}</p>
                 </div>
               </li>
             ))}
@@ -155,7 +157,7 @@ export function FeedPostCard({
                     <EntityLink kind="person" slug={viewer.slug}>{viewer.full_name}</EntityLink>
                     <span className="text-xs text-muted-foreground">just now</span>
                   </div>
-                  <p className="mt-0.5">{c.body}</p>
+                  <p className="mt-0.5 wrap-break-word">{c.body}</p>
                 </div>
               </li>
             ))}
@@ -168,7 +170,7 @@ export function FeedPostCard({
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               placeholder="Add a comment"
-              className="h-8 min-w-0 flex-1 rounded-lg border border-input bg-background px-2.5 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
+              className="h-11 min-w-0 flex-1 rounded-lg border border-input bg-background px-2.5 text-base outline-none md:h-8 md:text-sm focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
             />
             <Button type="submit" size="icon-sm" variant="outline" aria-label="Post comment" disabled={!draft.trim()}>
               <SendIcon />

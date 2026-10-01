@@ -35,7 +35,7 @@ export function SkillChip({
       onClick={() => demoActions.toggleEndorsement(profileId, skill.skill.id)}
       title={endorsed ? "Remove your endorsement" : `Endorse ${skill.skill.name}`}
       className={cn(
-        "inline-flex h-8 items-center gap-2 rounded-full border pr-1 pl-3 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring/50",
+        "inline-flex h-8 items-center gap-2 rounded-full border pr-1 pl-3 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring/50 pointer-coarse:h-11 pointer-coarse:pr-1.5 pointer-coarse:pl-4",
         endorsed
           ? "border-brand/40 bg-brand-soft text-foreground"
           : "border-border bg-background hover:border-foreground/40",

@@ -48,7 +48,7 @@ export function FilterBar({
             <select
               value={params.get(f.key) ?? ""}
               onChange={(e) => update(f.key, e.target.value)}
-              className="h-9 w-full rounded-lg sm:w-auto sm:min-w-36 border border-input bg-background px-2.5 text-sm font-normal text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
+              className="h-11 w-full rounded-lg sm:w-auto sm:min-w-36 md:h-9 border border-input bg-background px-2.5 text-base md:text-sm font-normal text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
             >
               <option value="">All</option>
               {f.options.map((o) => (

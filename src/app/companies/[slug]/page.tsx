@@ -62,15 +62,15 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
             <div className="flex items-center gap-1.5">
               <GlobeIcon className="size-4" aria-hidden />
               <dt className="sr-only">Website</dt>
-              <dd>{company.website}</dd>
+              <dd className="min-w-0 wrap-anywhere">{company.website}</dd>
             </div>
           </dl>
         </div>
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-        <div className="flex flex-col gap-6">
-          <Section title="About">
+        <div className="contents lg:flex lg:flex-col lg:gap-6">
+          <Section title="About" className="order-1 lg:order-none">
             <p className="max-w-prose text-[15px] leading-relaxed">{company.about}</p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <div>
@@ -89,7 +89,7 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
           </Section>
 
           {isSupplier ? (
-            <Section title="Products and materials" count={products.length}>
+            <Section title="Products and materials" count={products.length} className="order-3 lg:order-none">
               <ul className="mb-4 flex flex-wrap gap-1.5" aria-label="Product categories">
                 {company.product_categories.map((c) => (
                   <li key={c} className="rounded-md border border-border px-2 py-0.5 text-xs font-medium">{c}</li>
@@ -103,7 +103,7 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
             </Section>
           ) : null}
 
-          <Section title={isSupplier ? "Projects supplied" : "Projects"} count={projects.length}>
+          <Section title={isSupplier ? "Projects supplied" : "Projects"} count={projects.length} className="order-4 lg:order-none">
             {projects.length ? (
               <ul className="grid gap-4 sm:grid-cols-2">
                 {projects.map((p) => (
@@ -118,14 +118,14 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
           </Section>
 
           {posts.length ? (
-            <Section title="Posts" count={posts.length}>
+            <Section title="Posts" count={posts.length} className="order-7 lg:order-none">
               <PostList posts={posts} viewer={me.profile} />
             </Section>
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-6">
-          <Section title="People" count={members.length} action={<Link href={`/people?company=${company.id}`} className="text-xs text-muted-foreground hover:text-foreground hover:underline">See in directory</Link>}>
+        <div className="contents lg:flex lg:flex-col lg:gap-6">
+          <Section title="People" count={members.length} className="order-2 lg:order-none" action={<Link href={`/people?company=${company.id}`} className="text-xs text-muted-foreground hover:text-foreground hover:underline pointer-coarse:-mx-2 pointer-coarse:-my-3.5 pointer-coarse:px-2 pointer-coarse:py-3.5">See in directory</Link>}>
             <ul className="flex flex-col gap-3">
               {members.map(({ profile, title }) => (
                 <li key={profile.id} className="flex items-center gap-2.5">
@@ -139,7 +139,7 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
             </ul>
           </Section>
 
-          <Section title="Open roles" count={jobs.length}>
+          <Section title="Open roles" count={jobs.length} className="order-5 lg:order-none">
             {jobs.length ? (
               <ul className="flex flex-col gap-3">
                 {jobs.map((job) => (
@@ -163,11 +163,11 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
           </Section>
 
           {needs.length ? (
-            <Section title="Current needs" count={needs.length}>
+            <Section title="Current needs" count={needs.length} className="order-6 lg:order-none">
               <ul className="flex flex-col gap-3">
                 {needs.map(({ need }) => (
                   <li key={need.id} className="text-sm leading-snug">
-                    <Link href={`/needs/${need.id}`} className="font-medium hover:underline">{need.title}</Link>
+                    <Link href={`/needs/${need.id}`} className="block font-medium hover:underline pointer-coarse:-my-2 pointer-coarse:py-2">{need.title}</Link>
                     <span className="mt-0.5 block text-xs text-muted-foreground">{need.category}</span>
                   </li>
                 ))}

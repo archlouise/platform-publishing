@@ -145,6 +145,16 @@
   html {
     @apply font-sans;
     font-feature-settings: "ss01", "cv11";
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Keep scrolled-to targets clear of the fixed tab bar on phones and tablets. */
+  @media (width < 64rem) {
+    html {
+      scroll-padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+    }
+  }
+  a, button, input, select, textarea, [role="button"], [role="tab"] {
+    touch-action: manipulation;
   }
   h1, h2, h3, h4 {
     @apply font-heading;

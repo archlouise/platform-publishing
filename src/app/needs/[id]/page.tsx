@@ -24,7 +24,7 @@ export default async function NeedPage(props: PageProps<"/needs/[id]">) {
   return (
     <PageContainer>
       <div className="mx-auto max-w-3xl">
-        <Link href={view ? `/needs?tab=${view.need.need_type}` : "/needs"} className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
+        <Link href={view ? `/needs?tab=${view.need.need_type}` : "/needs"} className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground pointer-coarse:-mt-3 pointer-coarse:mb-1 pointer-coarse:py-3">
           <ArrowLeftIcon className="size-4" aria-hidden />
           Needs & Help
         </Link>
