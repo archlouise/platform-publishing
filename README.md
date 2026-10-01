@@ -104,6 +104,6 @@ The pages depend only on the `Repository` interface in `src/lib/repository.ts`.
 3. Point `src/lib/data/index.ts` at the new implementation, or choose it when `NEXT_PUBLIC_SUPABASE_URL` is set and keep the local repository as the fallback so presentations never depend on a network.
 4. Move the interaction store server-side: `post_likes`, `comments`, `endorsements`, `posts`, and `needs` writes replace the `localStorage` writes in `store.ts`. Add Supabase Auth and swap the seeded demo user for the session user in `getDemoProfile()`.
 
-## Source documents
+## Source documents and project record
 
-The business proposal, demo design document, and the master build prompt are in `docs/`.
+The business proposal, demo design document, and the master build prompt are in `docs/`. `PROJECT.md` is the project record: what the project is and why, every decision, and a dated log of all work.
