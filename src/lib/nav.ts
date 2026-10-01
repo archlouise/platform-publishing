@@ -12,6 +12,8 @@ export type NavItem = {
   href: string;
   label: string;
   icon: LucideIcon;
+  /** Shorter label for the phone tab bar. */
+  shortLabel?: string;
   /** Match the active state on nested routes too. */
   prefix?: string;
 };
@@ -21,7 +23,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/people", label: "People", icon: Users, prefix: "/people" },
   { href: "/companies", label: "Companies", icon: Building2, prefix: "/companies" },
   { href: "/projects", label: "Projects", icon: Landmark, prefix: "/projects" },
-  { href: "/needs", label: "Needs & Help", icon: HelpCircle, prefix: "/needs" },
+  { href: "/needs", label: "Needs & Help", shortLabel: "Needs", icon: HelpCircle, prefix: "/needs" },
   { href: "/profile", label: "My Profile", icon: UserRound, prefix: "/profile" },
 ];
 
