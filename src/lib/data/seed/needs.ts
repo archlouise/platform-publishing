@@ -107,7 +107,7 @@ export const needs: Need[] = [
   },
   {
     id: "nd_9",
-    author_profile_id: "pr_maya",
+    author_profile_id: "pr_louise",
     company_id: "co_meridian",
     need_type: "hiring",
     category: "Seeking consultant",

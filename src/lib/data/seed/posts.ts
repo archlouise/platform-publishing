@@ -47,7 +47,7 @@ export const posts: Post[] = [
   },
   {
     id: "po_5",
-    author_profile_id: "pr_maya",
+    author_profile_id: "pr_louise",
     author_company_id: "co_meridian",
     project_id: "pj_harborview",
     post_type: "project_showcase",
@@ -179,7 +179,7 @@ export const posts: Post[] = [
   },
   {
     id: "po_17",
-    author_profile_id: "pr_maya",
+    author_profile_id: "pr_louise",
     author_company_id: "co_meridian",
     project_id: "pj_berkeleyhub",
     post_type: "project_milestone",
@@ -278,12 +278,12 @@ export const comments: Comment[] = [
   { id: "cm_8", post_id: "po_8", profile_id: "pr_luis", body: "That DD meeting saved us at least three weeks of RFIs. Should be standard.", created_at: "2026-09-25T21:00:00Z" },
   { id: "cm_9", post_id: "po_15", profile_id: "pr_elena", body: "We have a precedent letter from the Emeryville review. Will send it over.", created_at: "2026-09-21T18:00:00Z" },
   { id: "cm_10", post_id: "po_18", profile_id: "pr_hannah", body: "We now ask for the erection drawing before we schedule the trucks for exactly this reason.", created_at: "2026-09-18T15:30:00Z" },
-  { id: "cm_11", post_id: "po_24", profile_id: "pr_maya", body: "Thank you for publishing this. It changes the conversation with every owner we talk to.", created_at: "2026-09-10T20:30:00Z" },
+  { id: "cm_11", post_id: "po_24", profile_id: "pr_louise", body: "Thank you for publishing this. It changes the conversation with every owner we talk to.", created_at: "2026-09-10T20:30:00Z" },
   { id: "cm_12", post_id: "po_24", profile_id: "pr_sofia", body: "The recirculation losses on the DHW were the biggest surprise in that dataset.", created_at: "2026-09-10T21:00:00Z" },
 ];
 
 export const postLikes: PostLike[] = [
-  { post_id: "po_2", profile_id: "pr_maya" },
-  { post_id: "po_8", profile_id: "pr_maya" },
-  { post_id: "po_18", profile_id: "pr_maya" },
+  { post_id: "po_2", profile_id: "pr_louise" },
+  { post_id: "po_8", profile_id: "pr_louise" },
+  { post_id: "po_18", profile_id: "pr_louise" },
 ];

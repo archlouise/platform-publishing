@@ -244,7 +244,7 @@ export const projectCompanies: ProjectCompany[] = [
 /** Individual contributions, with the employer at the time of the project. */
 export const projectPeople: ProjectPerson[] = [
   // Harbor View Lofts
-  { id: "pp_1", project_id: "pj_harborview", profile_id: "pr_maya", company_id: "co_meridian", role_label: "Principal in charge", status: "confirmed" },
+  { id: "pp_1", project_id: "pj_harborview", profile_id: "pr_louise", company_id: "co_meridian", role_label: "Project lead", status: "confirmed" },
   { id: "pp_2", project_id: "pj_harborview", profile_id: "pr_daniel", company_id: "co_meridian", role_label: "Project architect", status: "confirmed" },
   { id: "pp_3", project_id: "pj_harborview", profile_id: "pr_elena", company_id: "co_halvorsen", role_label: "Engineer of record", status: "confirmed" },
   { id: "pp_4", project_id: "pj_harborview", profile_id: "pr_jonah", company_id: "co_halvorsen", role_label: "Project engineer, timber connections", status: "confirmed" },
@@ -255,7 +255,7 @@ export const projectPeople: ProjectPerson[] = [
   { id: "pp_9", project_id: "pj_harborview", profile_id: "pr_luis", company_id: "co_bayline", role_label: "Facade operations lead", status: "confirmed" },
   { id: "pp_10", project_id: "pj_harborview", profile_id: "pr_hannah", company_id: "co_sierratimber", role_label: "Technical sales and detailing support", status: "confirmed" },
   // Mission Creek Commons
-  { id: "pp_11", project_id: "pj_missioncreek", profile_id: "pr_maya", company_id: "co_meridian", role_label: "Principal in charge", status: "confirmed" },
+  { id: "pp_11", project_id: "pj_missioncreek", profile_id: "pr_louise", company_id: "co_meridian", role_label: "Project lead", status: "confirmed" },
   { id: "pp_12", project_id: "pj_missioncreek", profile_id: "pr_daniel", company_id: "co_meridian", role_label: "Project architect", status: "confirmed" },
   { id: "pp_13", project_id: "pj_missioncreek", profile_id: "pr_elena", company_id: "co_halvorsen", role_label: "Engineer of record, seismic retrofit", status: "confirmed" },
   { id: "pp_14", project_id: "pj_missioncreek", profile_id: "pr_marcus", company_id: "co_ridgeline", role_label: "MEP principal", status: "confirmed" },
@@ -280,7 +280,7 @@ export const projectPeople: ProjectPerson[] = [
   { id: "pp_31", project_id: "pj_evergreen", profile_id: "pr_kevin", company_id: "co_pacifickeel", role_label: "Preconstruction lead", status: "confirmed" },
   { id: "pp_32", project_id: "pj_evergreen", profile_id: "pr_luis", company_id: "co_bayline", role_label: "Curtain wall operations lead", status: "confirmed" },
   // Fruitvale Transit Village Phase II
-  { id: "pp_33", project_id: "pj_fruitvale", profile_id: "pr_maya", company_id: "co_meridian", role_label: "Design principal", status: "confirmed" },
+  { id: "pp_33", project_id: "pj_fruitvale", profile_id: "pr_louise", company_id: "co_meridian", role_label: "Project manager", status: "confirmed" },
   { id: "pp_34", project_id: "pj_fruitvale", profile_id: "pr_daniel", company_id: "co_meridian", role_label: "Project architect", status: "confirmed" },
   { id: "pp_35", project_id: "pj_fruitvale", profile_id: "pr_elena", company_id: "co_halvorsen", role_label: "Structural principal", status: "confirmed" },
   { id: "pp_36", project_id: "pj_fruitvale", profile_id: "pr_jonah", company_id: "co_halvorsen", role_label: "Project engineer, lateral system", status: "self_claimed" },
@@ -296,7 +296,7 @@ export const projectPeople: ProjectPerson[] = [
   { id: "pp_45", project_id: "pj_presidioridge", profile_id: "pr_luis", company_id: "co_bayline", role_label: "Glazing operations lead", status: "confirmed" },
   { id: "pp_46", project_id: "pj_presidioridge", profile_id: "pr_victor", company_id: "co_coastalprecast", role_label: "Precast specification manager", status: "confirmed" },
   // Emeryville Public Library
-  { id: "pp_47", project_id: "pj_emeryville", profile_id: "pr_maya", company_id: "co_meridian", role_label: "Principal in charge", status: "confirmed" },
+  { id: "pp_47", project_id: "pj_emeryville", profile_id: "pr_louise", company_id: "co_meridian", role_label: "Project manager", status: "confirmed" },
   { id: "pp_48", project_id: "pj_emeryville", profile_id: "pr_daniel", company_id: "co_meridian", role_label: "Project architect", status: "confirmed" },
   { id: "pp_49", project_id: "pj_emeryville", profile_id: "pr_elena", company_id: "co_halvorsen", role_label: "Engineer of record", status: "confirmed" },
   { id: "pp_50", project_id: "pj_emeryville", profile_id: "pr_jonah", company_id: "co_halvorsen", role_label: "Project engineer, roof structure", status: "confirmed" },
@@ -319,7 +319,7 @@ export const projectPeople: ProjectPerson[] = [
   { id: "pp_65", project_id: "pj_greenwaybridge", profile_id: "pr_amara", company_id: "co_pacifickeel", role_label: "Project executive", status: "confirmed" },
   { id: "pp_66", project_id: "pj_greenwaybridge", profile_id: "pr_hannah", company_id: "co_sierratimber", role_label: "Glulam arch technical lead", status: "confirmed" },
   // Berkeley Arts and Culture Hub
-  { id: "pp_67", project_id: "pj_berkeleyhub", profile_id: "pr_maya", company_id: "co_meridian", role_label: "Design principal", status: "confirmed" },
+  { id: "pp_67", project_id: "pj_berkeleyhub", profile_id: "pr_louise", company_id: "co_meridian", role_label: "Project manager", status: "confirmed" },
   { id: "pp_68", project_id: "pj_berkeleyhub", profile_id: "pr_elena", company_id: "co_halvorsen", role_label: "Structural principal", status: "confirmed" },
   { id: "pp_69", project_id: "pj_berkeleyhub", profile_id: "pr_grace", company_id: "co_halvorsen", role_label: "Civil engineer", status: "self_claimed" },
   { id: "pp_70", project_id: "pj_berkeleyhub", profile_id: "pr_marcus", company_id: "co_ridgeline", role_label: "MEP principal", status: "self_claimed" },

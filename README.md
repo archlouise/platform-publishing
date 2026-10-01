@@ -11,7 +11,7 @@ pnpm install
 pnpm dev
 ```
 
-Open http://localhost:3000. The app lands on the Feed, signed in as a seeded demo user (Maya Lindqvist, Principal at Meridian Atelier).
+Open http://localhost:3000. The app lands on the Feed, signed in as the demo user, Louise Hung, shown as Project Manager at the fictional Meridian Atelier.
 
 | Command | What it does |
 |---|---|
@@ -93,7 +93,7 @@ Project participation is modeled only as `project_companies` and `project_people
 3. **Demo interactions live in the browser.** Likes, saves, comments, endorsements, and created posts and needs are stored in `localStorage`, layered over the read-only seed. Needs created locally render through a client component on their detail page.
 4. **Images are generated.** Avatars, logos, covers, product images, and project heroes are deterministic inline SVGs, so the demo never depends on a remote image host. Replace `avatar_url`, `logo_url`, `cover_url`, `hero_url`, or `image_url` with real URLs to override.
 5. **Relative times** are computed from the real clock but never earlier than 1 October 2026, the latest seeded date.
-6. **Seed data is fictional** and set in the SF Bay Area. No real firm, person, or project is referenced.
+6. **Seed data is fictional** and set in the SF Bay Area, with one exception: the signed-in demo user is Louise Hung, using her public professional details (headline, summary, pre-2022 experience, education, licenses, and skills from LinkedIn). In the demo she is placed at the fictional Meridian Atelier with roles on its fictional projects; her real current employer is not shown so that no real firm is tied to invented projects.
 
 ## Connecting Supabase
 
