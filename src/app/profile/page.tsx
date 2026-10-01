@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-import { PageContainer, PageHeading } from "@/components/layout/PageContainer";
+import { redirect } from "next/navigation";
+import { repo } from "@/lib/data";
 
-export const metadata: Metadata = { title: "My Profile" };
-
-export default function Page() {
-  return (
-    <PageContainer>
-      <PageHeading title="My Profile" />
-      <p className="text-sm text-muted-foreground">Coming in the next build step.</p>
-    </PageContainer>
-  );
+/** "My Profile" is the seeded signed-in demo user. */
+export default async function MyProfilePage() {
+  const me = await repo.getDemoProfile();
+  redirect(`/people/${me.profile.slug}`);
 }
