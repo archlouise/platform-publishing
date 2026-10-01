@@ -10,7 +10,7 @@ function RailSection({ title, href, children }: { title: string; href: string; c
     <section className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
       <div className="mb-3 flex items-baseline justify-between">
         <h2 className="text-sm font-semibold">{title}</h2>
-        <Link href={href} className="text-xs text-muted-foreground hover:text-foreground hover:underline">
+        <Link href={href} className="text-xs text-muted-foreground hover:text-foreground hover:underline pointer-coarse:-mx-2 pointer-coarse:-my-3.5 pointer-coarse:px-2 pointer-coarse:py-3.5">
           See all
         </Link>
       </div>

@@ -56,7 +56,7 @@ export function NeedCard({ view, expanded = false }: { view: NeedView; expanded?
           {pluralize(need.reply_count, "reply", "replies")}
         </span>
         {!expanded ? (
-          <Link href={`/needs/${need.id}`} className="text-xs font-medium text-brand hover:underline">
+          <Link href={`/needs/${need.id}`} className="text-xs font-medium text-brand hover:underline pointer-coarse:-mx-2 pointer-coarse:-my-3.5 pointer-coarse:px-2 pointer-coarse:py-3.5">
             Open
           </Link>
         ) : null}

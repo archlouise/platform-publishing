@@ -1,6 +1,7 @@
 import { FeedList } from "@/components/feed/FeedList";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { RightRail } from "@/components/layout/RightRail";
+import { SuggestionsStrip } from "@/components/layout/SuggestionsStrip";
 import { repo } from "@/lib/data";
 
 export default async function FeedPage() {
@@ -25,6 +26,7 @@ export default async function FeedPage() {
             viewer={me.profile}
             viewerCompany={me.company}
             projects={projects}
+            afterComposer={<SuggestionsStrip people={people} companies={companies} />}
           />
         </div>
         <div className="hidden lg:block">

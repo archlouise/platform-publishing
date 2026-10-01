@@ -67,12 +67,12 @@ export function PostComposer({
             onFocus={() => setExpanded(true)}
             onChange={(e) => setBody(e.target.value)}
             rows={expanded ? 4 : 1}
-            placeholder="Share a milestone, a lesson from site, or a question for the industry"
-            className="w-full resize-none rounded-lg border border-input bg-background px-3 py-2 text-[15px] leading-relaxed outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
+            placeholder="What are you working on?"
+            className="min-h-11 w-full resize-none rounded-lg border border-input bg-background px-3 py-2 text-base leading-relaxed md:text-[15px] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
           />
           {expanded ? (
             <div className="mt-3 flex flex-col gap-3">
-              <div role="radiogroup" aria-label="Post type" className="flex flex-wrap gap-1.5">
+              <div role="radiogroup" aria-label="Post type" className="flex flex-wrap gap-2">
                 {COMPOSER_TYPES.map((t) => (
                   <button
                     key={t}
@@ -81,7 +81,7 @@ export function PostComposer({
                     aria-checked={type === t}
                     onClick={() => setType(t)}
                     className={cn(
-                      "h-7 rounded-full border px-2.5 text-xs font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring/50",
+                      "h-7 rounded-full border px-2.5 text-xs font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring/50 pointer-coarse:h-11 pointer-coarse:px-3.5",
                       type === t
                         ? "border-foreground bg-foreground text-background"
                         : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground",
@@ -99,7 +99,7 @@ export function PostComposer({
                   id="composer-project"
                   value={projectId}
                   onChange={(e) => setProjectId(e.target.value)}
-                  className="h-8 max-w-full rounded-lg border border-input bg-background px-2 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
+                  className="h-11 max-w-full rounded-lg border border-input bg-background px-2 text-base outline-none md:h-8 md:text-sm focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
                 >
                   <option value="">None</option>
                   {projects.map((p) => (

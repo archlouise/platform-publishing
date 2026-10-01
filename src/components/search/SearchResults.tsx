@@ -13,7 +13,7 @@ function Group({ title, count, href, children }: { title: string; count: number;
         <h2 className="font-heading text-lg font-semibold tracking-tight">
           {title} <span className="ml-1 text-sm font-normal text-muted-foreground">{count}</span>
         </h2>
-        <Link href={href} className="text-xs text-muted-foreground hover:text-foreground hover:underline">
+        <Link href={href} className="text-xs text-muted-foreground hover:text-foreground hover:underline pointer-coarse:-mx-2 pointer-coarse:-my-3.5 pointer-coarse:px-2 pointer-coarse:py-3.5">
           Browse all
         </Link>
       </div>
