@@ -34,7 +34,7 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={company.cover_url ?? coverUri(company.id)} alt="" className="h-32 w-full object-cover md:h-44" />
         <div className="px-5 pb-5">
-          <div className="-mt-10 flex flex-wrap items-end gap-4">
+          <div className="-mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:gap-4">
             <CompanyLogo company={company} size="xl" className="rounded-xl ring-4 ring-card" />
             <div className="min-w-0 flex-1 pt-2">
               <h1 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">{company.name}</h1>

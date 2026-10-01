@@ -30,7 +30,7 @@ export default async function PersonPage(props: PageProps<"/people/[slug]">) {
       <header className="mb-6 rounded-xl bg-card ring-1 ring-foreground/10">
         <div className="h-24 rounded-t-xl bg-[linear-gradient(90deg,var(--brand-soft),transparent)] md:h-28" aria-hidden />
         <div className="px-5 pb-5">
-          <div className="-mt-12 flex flex-wrap items-end gap-4">
+          <div className="-mt-12 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:gap-4">
             <PersonAvatar profile={profile} size="xl" className="ring-4 ring-card" />
             <div className="min-w-0 flex-1 pt-2">
               <div className="flex flex-wrap items-center gap-2">

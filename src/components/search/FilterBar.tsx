@@ -41,14 +41,14 @@ export function FilterBar({
 
   return (
     <div className="mb-6 flex flex-col gap-3">
-      <div className="flex flex-wrap items-end gap-3">
+      <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-end">
         {filters.map((f) => (
-          <label key={f.key} className="flex flex-col gap-1 text-xs font-medium text-muted-foreground">
+          <label key={f.key} className="flex min-w-0 flex-col gap-1 text-xs font-medium text-muted-foreground">
             {f.label}
             <select
               value={params.get(f.key) ?? ""}
               onChange={(e) => update(f.key, e.target.value)}
-              className="h-9 min-w-36 rounded-lg border border-input bg-background px-2.5 text-sm font-normal text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
+              className="h-9 w-full rounded-lg sm:w-auto sm:min-w-36 border border-input bg-background px-2.5 text-sm font-normal text-foreground outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
             >
               <option value="">All</option>
               {f.options.map((o) => (
