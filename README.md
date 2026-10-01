@@ -30,7 +30,7 @@ Open http://localhost:3000. The app lands on the Feed, signed in as the demo use
 - **Needs & Help** (`/needs`, `/needs/[id]`): two tabs, Open discussion and Hiring and seeking work. Posting a question or an opening works.
 - **Search** (`/search?q=`): grouped results across people, companies, and projects from the header search box.
 - **My Profile** (`/profile`): redirects to the demo user.
-- **Phones and tablets** (below 1024px): a fixed bottom tab bar replaces the desktop nav, the header collapses to one row with a search toggle and the signed-in avatar, the feed shows a scrolling strip of suggested people and firms, and profile and company pages put summary sections before the long lists. Touch devices get 44px controls and 16px inputs.
+- **Phones and tablets** (below 1024px): a fixed bottom tab bar replaces the desktop nav and the header shows the signed-in avatar; below 768px the header's search box also collapses to a toggle. The feed shows a scrolling strip of suggested people and firms, and profile and company pages put summary sections before the long lists. Touch devices get 44px controls and 16px inputs.
 
 Demo interactions (likes, saves, comments, endorsements, created posts and needs) persist in `localStorage` under the key `aec-network-demo-v1`. Clear site data to reset.
 

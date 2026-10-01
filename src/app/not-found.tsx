@@ -12,10 +12,10 @@ export default function NotFound() {
           instead.
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-2 text-sm font-medium">
-          <Link href="/" className="rounded-lg bg-primary px-3 py-1.5 text-primary-foreground hover:bg-primary/80">
+          <Link href="/" className="rounded-lg bg-primary px-3 py-1.5 text-primary-foreground hover:bg-primary/80 pointer-coarse:px-4 pointer-coarse:py-3">
             Back to the feed
           </Link>
-          <Link href="/search" className="rounded-lg border border-border px-3 py-1.5 hover:bg-muted">
+          <Link href="/search" className="rounded-lg border border-border px-3 py-1.5 hover:bg-muted pointer-coarse:px-4 pointer-coarse:py-3">
             Search
           </Link>
         </div>

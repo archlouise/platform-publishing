@@ -12,10 +12,10 @@ export async function AppHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
-      <div className="relative mx-auto flex h-14 max-w-6xl items-center gap-3 px-4">
+      <div className="group/header relative mx-auto flex h-14 max-w-6xl items-center gap-3 px-4">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2 rounded-md outline-none focus-visible:ring-3 focus-visible:ring-ring/50 pointer-coarse:min-h-11"
+          className="flex shrink-0 items-center gap-2 rounded-md outline-none focus-visible:ring-3 focus-visible:ring-ring/50 pointer-coarse:min-h-11 max-md:group-has-[[data-search-open]]/header:invisible"
           aria-label="AEC Network home"
         >
           <Wordmark />
@@ -33,7 +33,7 @@ export async function AppHeader() {
           <Link
             href="/profile"
             aria-label="My profile"
-            className="flex size-11 shrink-0 items-center justify-center rounded-full outline-none focus-visible:ring-3 focus-visible:ring-ring/50 lg:hidden"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full outline-none focus-visible:ring-3 focus-visible:ring-ring/50 lg:hidden max-md:group-has-[[data-search-open]]/header:invisible"
           >
             <PersonAvatar profile={me.profile} size="sm" />
           </Link>

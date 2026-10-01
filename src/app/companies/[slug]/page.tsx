@@ -167,7 +167,7 @@ export default async function CompanyPage(props: PageProps<"/companies/[slug]">)
               <ul className="flex flex-col gap-3">
                 {needs.map(({ need }) => (
                   <li key={need.id} className="text-sm leading-snug">
-                    <Link href={`/needs/${need.id}`} className="font-medium hover:underline">{need.title}</Link>
+                    <Link href={`/needs/${need.id}`} className="block font-medium hover:underline pointer-coarse:-my-2 pointer-coarse:py-2">{need.title}</Link>
                     <span className="mt-0.5 block text-xs text-muted-foreground">{need.category}</span>
                   </li>
                 ))}

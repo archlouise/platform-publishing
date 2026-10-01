@@ -68,7 +68,7 @@ export function PostComposer({
             onChange={(e) => setBody(e.target.value)}
             rows={expanded ? 4 : 1}
             placeholder="What are you working on?"
-            className="min-h-11 w-full resize-none rounded-lg border border-input bg-background px-3 py-2 text-base leading-relaxed md:text-[15px] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
+            className="min-h-11 w-full resize-none md:min-h-0 rounded-lg border border-input bg-background px-3 py-2 text-base leading-relaxed md:text-[15px] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/40"
           />
           {expanded ? (
             <div className="mt-3 flex flex-col gap-3">
