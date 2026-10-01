@@ -48,12 +48,12 @@ export function FeedPostCard({
   return (
     <article className="rounded-xl bg-card ring-1 ring-foreground/10">
       <header className="flex items-start gap-3 px-4 pt-4">
-        <Link href={entityHref("person", author.slug)} className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring/50">
+        <Link href={entityHref("person", author.slug)} className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring/50 pointer-coarse:-m-0.5 pointer-coarse:p-0.5">
           <PersonAvatar profile={author} size="md" />
         </Link>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-            <EntityLink kind="person" slug={author.slug} className="text-[15px]">
+            <EntityLink kind="person" slug={author.slug} className="text-[15px] pointer-coarse:-my-3 pointer-coarse:py-3">
               {author.full_name}
             </EntityLink>
             {company ? (
