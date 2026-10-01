@@ -67,7 +67,7 @@ The proposal is strategic and cautious; its differentiator is verified project c
 
 | | |
 |---|---|
-| Status | Demo v1 complete and deployed |
+| Status | Demo v1 complete and deployed, with the mobile layout pass live |
 | Live URL | https://aec-network.vercel.app |
 | Repository | https://github.com/archlouise/platform-publishing (public, `main`) |
 | Hosting | Vercel project `aec-network` in the `louise-hung` team; deployed manually from the local folder, no GitHub auto-deploy yet |
@@ -91,6 +91,7 @@ Numbered so later entries in the log can refer to them.
 6. **Demo interactions live in the browser.** Likes, saves, comments, endorsements, and user-created posts and needs are stored in localStorage under `aec-network-demo-v1`, layered over the read-only seed. Images are generated inline SVGs (avatars, logos, covers, and elevation-style project drawings) so nothing depends on a remote host.
 7. **The signed-in demo user is Louise Hung, using her public LinkedIn details.** Karl's request, 1 October 2026. Headline, summary, pre-2022 experience, Washington University in St. Louis M.Arch, California architect license, LEED AP BD+C, and skills come from her public profile. In the demo she is placed at the fictional Meridian Atelier with project-management roles on its fictional projects. Her real current employer is deliberately not shown so that no real firm is tied to invented projects. This is the only real person in the dataset. Open: Karl may prefer to show her real current role and detach her from the fictional firm.
 8. **Deploy on Vercel from the local folder under Karl's account.** 1 October 2026. GitHub auto-deploys would require the Vercel GitHub app installed on Louise's GitHub account (archlouise), which only she can do.
+9. **Phones and tablets get a bottom tab bar; desktop keeps the top nav.** Below 1024px a fixed tab bar (Feed, People, Companies, Projects, Needs) replaces the hamburger sheet, which is removed. The header is one row with the signed-in avatar linking to My Profile and, below 768px, a search toggle that expands into the field. The feed's right rail becomes a horizontal strip of people and firms under the composer. Person and company pages put summary sections (At a glance, Skills; People, Open roles) before the long lists on phones. Touch devices get 44px controls and 16px inputs. Decided 1 October 2026 with Karl: a pitch demo on phones now, daily on-site use later, and no redesign of the desktop.
 
 ---
 
@@ -128,6 +129,10 @@ Verification for the build: lint, typecheck, seed validation, and production bui
 - **Vercel deployment, about 11:20.** Logged the Vercel CLI into Karl's account by device code, linked the folder to a new project `aec-network`, deployed to production. Verified: deployment state Ready, https://aec-network.vercel.app returns 200 with no login wall and renders the feed with Louise as the signed-in user in a fresh browser. Link sent to Louise.
 - **This file created** and a rule added to `CLAUDE.md` to keep it updated.
 
+### 2026-10-01, evening
+- **PR #12, about 13:07.** Mobile layout pass (decision 9): bottom tab bar, one-row phone header with search toggle and avatar, feed suggestions strip, phone section order on person and company pages, 44px touch targets through Tailwind's coarse-pointer variant, 16px inputs, accessible names on Like and Comment, `viewport` export with `viewport-fit=cover`, safe-area padding, word-breaking on long text. Verified: lint, typecheck, seed validation and production build; in Chrome through same-origin iframes every route has zero horizontal overflow at 360, 390, 430 and 768px and the desktop at 1280px is unchanged; touch sizes checked by applying the compiled coarse-pointer rules in the frames; like, save, comment and endorse persist across a reload; a fresh whole-branch code review found nothing above minor and its findings were fixed before merge. Not yet checked on a real phone: the safe-area inset and the iOS keyboard.
+- **Vercel deployment, about 13:07.** Deployed from the branch folder just before the merge so this entry could record a verified deploy. Production returns 200 with the new viewport meta, theme colour, tab bar, avatar link and strip.
+
 ---
 
 ## 6. Open items and next steps
@@ -139,6 +144,7 @@ Product and data
 
 Engineering
 - Connect Supabase for multi-user persistence and auth; the `Repository` interface and view types in `src/lib` are the seam. Keep the seeded local mode for presentations.
+- Check the mobile layout on a real phone: the safe-area inset under the tab bar on notched iPhones and the keyboard behaviour of the header search field.
 - Install the Vercel GitHub app on archlouise/platform-publishing so every merge to `main` deploys itself. Until then, redeploy manually with `pnpm dlx vercel --prod --yes` from this folder.
 - Known quirk: the Next dev server can serve a stale Tailwind CSS chunk after new utility classes are added in new files; restarting `pnpm dev` fixes it. Production builds are correct.
 
